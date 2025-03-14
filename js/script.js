@@ -1,5 +1,5 @@
 // API link 
-const uri = "https://lanciweb.github.io/demo/api/picturesdfs/"
+const uri = "https://lanciweb.github.io/demo/api/pictures/"
 
 // htmlElements 
 const containerElement = document.getElementById("cards-container");
@@ -34,9 +34,6 @@ function axiosCall (apiLink){
             bodyElement.innerHTML = "";
             bodyElement.append(htmlnewH1, htmlnewH2);
             bodyElement.classList.add("error");
-            console.log(htmlnewH1, "h1");
-            console.log(htmlnewH2, "h2");
-            console.log(bodyElement);
         })
 }
 

@@ -153,6 +153,12 @@ main .photo-card{
 
  .error {
     padding: 50px;
-    background-color: red;
     background-image: url(../img/cork.png);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+h2 {
+    font-size: 100px;
+    margin: 40px;
 }
