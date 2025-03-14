@@ -1,3 +1,5 @@
+/* Default Properties */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,4 +11,16 @@
 /* font-family: "Sometype Mono", monospace; */
 body {
     font-family: "Sometype Mono", monospace;
+}
+
+
+
+/* HEADER  */
+
+header{
+    background-image: url(../img/wall.png);
+    padding: 40px;
+    text-align: center;
+    font-family: "Edu TAS Beginner", cursive; 
+    font-size: 40px;
 }
