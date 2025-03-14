@@ -28,6 +28,10 @@ header{
     font-size: 80px;
 }
 
+h1, h2 {
+    text-align: center;
+}
+
 /*----------------- MAIN-------------------  */
 main {
     background-image: url(../img/cork.png);
@@ -141,3 +145,14 @@ main .photo-card{
 
     }
  } 
+
+
+
+
+ /* Error settings  */
+
+ .error {
+    padding: 50px;
+    background-color: red;
+    background-image: url(../img/cork.png);
+}

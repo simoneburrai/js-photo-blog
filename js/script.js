@@ -1,9 +1,10 @@
 // API link 
-const uri = "https://lanciweb.github.io/demo/api/pictures/"
+const uri = "https://lanciweb.github.io/demo/api/picturesdfs/"
 
 // htmlElements 
 const containerElement = document.getElementById("cards-container");
-console.log(containerElement)
+const bodyElement = document.querySelector("body");
+// console.log(containerElement)
 
 
 
@@ -19,11 +20,23 @@ function axiosCall (apiLink){
 
         .then (function (response) {
             const elements = response.data;
-            console.log(elements)
-            console.log(elements[0])
+            // console.log(elements)
+            // console.log(elements[0])
             for(i=0; i<elements.length; i++){
                 containerElement.innerHTML += createHTMLElement(elements[i])
             }
+        })
+        .catch(function (error){
+            htmlnewH1 = document.createElement("h1");
+            htmlnewH2 = document.createElement("h2");
+            htmlnewH1.innerText = "Ops, Qualcosa è andato storto"
+            htmlnewH2.innerHTML = `ERROR ${error.status}`
+            bodyElement.innerHTML = "";
+            bodyElement.append(htmlnewH1, htmlnewH2);
+            bodyElement.classList.add("error");
+            console.log(htmlnewH1, "h1");
+            console.log(htmlnewH2, "h2");
+            console.log(bodyElement);
         })
 }
 
@@ -42,3 +55,5 @@ function createHTMLElement (obj){
     `
     return htmlElement;
 }
+
+
