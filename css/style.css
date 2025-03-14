@@ -35,7 +35,7 @@ main {
 }
 
 /* MAIN CONTAINER  */
-main .container {
+#cards-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -60,7 +60,7 @@ main .photo-card{
 }
 
 /* PHOTO CARD PIN  */
-main .container img.pin {
+.photo-card img.pin {
     position: absolute;
     width: 60px;
     height: 60px;
@@ -70,12 +70,12 @@ main .container img.pin {
 }
 
 /* PHOTO-CONTAINER  */
-main .container .photo-container {
+.photo-card .photo-container {
     width: 600px;
     height: 600px;
 }
 /* PHOTO CONTAINER IMG  */
-main .container .photo-container img {
+.photo-card .photo-container img {
     object-fit: cover;
     width: 100%;
     height: 100%;
