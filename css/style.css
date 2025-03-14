@@ -64,8 +64,8 @@ main .photo-card{
 /* PHOTO CARD PIN  */
 .photo-card img.pin {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     top: 0;
     right: 50%;
     transform: translate(50%, -25%);
@@ -74,7 +74,6 @@ main .photo-card{
 /* PHOTO-CONTAINER  */
 .photo-card .photo-container {
     width: 260px;
-    height: 260px;
 }
 /* PHOTO CONTAINER IMG  */
 .photo-card .photo-container img {
@@ -101,8 +100,13 @@ main .photo-card{
     }
     .photo-card .photo-container {
         width: 200px;
-        height: 200px;
     }
+
+    .photo-card img.pin {
+        width: 35px;
+        height: 35px;
+    }
+    
     main .photo-card{
         padding: 15px;
     }
@@ -113,6 +117,7 @@ main .photo-card{
  } 
 
  @media  screen and (max-width: 768px) {
+    
     header{
         font-size: 30px;
     }
@@ -133,6 +138,6 @@ main .photo-card{
     }
     .photo-card .photo-container {
         width: 160px;
-        height: 160px;
+
     }
  } 
