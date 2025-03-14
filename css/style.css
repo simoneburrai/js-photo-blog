@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Names  */
+/* font-family: "Edu TAS Beginner", cursive;  */
+/* font-family: "Sometype Mono", monospace; */
 body {
-    background-color: blue;
+    font-family: "Sometype Mono", monospace;
 }
