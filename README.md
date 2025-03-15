@@ -12,6 +12,9 @@ In questa pagina verranno visualizzate delle foto (e tutte le informazioni relat
 ### Milestone 1 
 Come primo obiettivo abbiamo il compito di creare la pagina Web, utilizzando solamente HTML e CSS. Come riferimento abbiamo degli screenshot, che troverete nella cartella immagini.
 
+### Milestone 2
+Lavorando con Postman si inizia a vedere il funzionamento dell'API fornita e prendere atto di come i dati sono stati raccolti all'interno di essa, per andare poi a chiamarli e visualizzarli nel nostro progetto.
+
 ### Milestone 3
 
 La Milestone 3 si concentra prettamente su Javascript. Bisogna effettuare una chiamata Ajax all'API, in modo da raccogliere i dati relativi alle foto (foto comprese) e pubblicarle in pagina sfruttando l'API del DOM.
