@@ -41,23 +41,35 @@ function axiosCall (apiLink){
             // Button Overlay functions 
 
 
-            const closeButtonElementResponseCheck = document.querySelector(".close-button");
+            
 
-            closeButtonElementResponseCheck.addEventListener("click", function() {
-                bodyElement.classList.remove("body-overflow");
-                divOverlay.classList.add("d-none");
-            })
+            function buttonFunction(){
+                const closeButtonElementResponseCheck = document.querySelector(".close-button");
+                closeButtonElementResponseCheck.addEventListener("click", function() {
+                    bodyElement.classList.remove("body-overflow");
+                    divOverlay.classList.add("d-none");
+                })
+            }
+            buttonFunction();
 
+            
             // Image Overlay Options 
 
             const photoCardAllElements = document.querySelectorAll(".photo-card");
 
-            console.log(photoCardAllElements);
-            console.log(response.data);
+    
+            for(i=0; i < photoCardAllElements.length; i++){
+                const photoCardCurrentElement = photoCardAllElements[i];
+                const currentAPIimage = elements[i];
+                photoCardCurrentElement.addEventListener("click", function(){
+                    divOverlay.innerHTML = "";
+                    divOverlay.append(closeButtonElement);
+                    divOverlay.innerHTML += createImgElement(currentAPIimage);
+                    bodyElement.classList.add("body-overflow");
+                    divOverlay.classList.remove("d-none");
+                    buttonFunction();
 
-            for(i=0; i<photoCardAllElements; i++){
-                const photoCardCurrentElement = photoCardAllElements(i).value;
-                console.log(photoCardCurrentElement);
+                })
             }
 
 
