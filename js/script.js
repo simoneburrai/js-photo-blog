@@ -4,7 +4,15 @@ const uri = "https://lanciweb.github.io/demo/api/pictures/"
 // htmlElements 
 const containerElement = document.getElementById("cards-container");
 const bodyElement = document.querySelector("body");
-// console.log(containerElement)
+
+// overlay container 
+const divOverlay = document.createElement("div");
+divOverlay.classList.add("overlay");
+
+// close Button Overlay 
+closeButtonElement = document.createElement("button");
+closeButtonElement.innerHTML = "Chiudi";
+closeButtonElement.classList.add("close-button");
 
 
 
@@ -22,10 +30,40 @@ function axiosCall (apiLink){
             const elements = response.data;
             // console.log(elements)
             // console.log(elements[0])
+            divOverlay.append(closeButtonElement);
+            divOverlay.innerHTML +=createImgElement(elements[0]);
+            bodyElement.append(divOverlay);
+            bodyElement.classList.add("body-overflow")
             for(i=0; i<elements.length; i++){
                 containerElement.innerHTML += createHTMLElement(elements[i])
             }
+
+            // Button Overlay functions 
+
+
+            const closeButtonElementResponseCheck = document.querySelector(".close-button");
+
+            closeButtonElementResponseCheck.addEventListener("click", function() {
+                bodyElement.classList.remove("body-overflow");
+                divOverlay.classList.add("d-none");
+            })
+
+            // Image Overlay Options 
+
+            const photoCardAllElements = document.querySelectorAll(".photo-card");
+
+            console.log(photoCardAllElements);
+            console.log(response.data);
+
+            for(i=0; i<photoCardAllElements; i++){
+                const photoCardCurrentElement = photoCardAllElements(i).value;
+                console.log(photoCardCurrentElement);
+            }
+
+
         })
+
+
         .catch(function (error){
             htmlnewH1 = document.createElement("h1");
             htmlnewH2 = document.createElement("h2");
@@ -36,6 +74,7 @@ function axiosCall (apiLink){
             bodyElement.classList.add("error");
         })
 }
+
 
 
 function createHTMLElement (obj){
@@ -53,6 +92,16 @@ function createHTMLElement (obj){
     `
     return htmlElement;
 }
+
+function createImgElement (obj){
+    imgElement = `
+                    <img class="overlay-img" src="${obj.url}" alt=" ${obj.title}">
+    `
+    return imgElement;
+}
+
+
+
 
 
 

@@ -36,7 +36,6 @@ h1, h2 {
 main {
     background-image: url(../img/cork.png);
     width: 100vw;
-
 }
 
 /* MAIN CONTAINER  */
@@ -190,3 +189,52 @@ h2 {
     margin: 40px;
 }
 
+
+
+
+
+/* Overlay Options  */
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    gap: 30px;
+    flex-direction: column;
+    padding: 50px;
+}
+.body-overflow {
+    overflow: hidden;
+}
+
+/* Image options  */
+.overlay-img {
+    width: 400px;
+    height: 400px;
+}
+
+
+/* Button element  */
+
+
+.close-button {
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
