@@ -48,9 +48,11 @@ function createHTMLElement (obj){
                 <div class="photo-description">
                     ${obj.title}
                 </div>
+                <div class="photo-date">${obj.date}</div>
             </div>
     `
     return htmlElement;
 }
+
 
 
