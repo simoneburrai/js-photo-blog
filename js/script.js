@@ -92,10 +92,11 @@ function createHTMLElement (obj){
                 <div class="photo-container">
                     <img src="${obj.url}" alt=" ${obj.title}">
                 </div>
+                 <div class="photo-date">${obj.date}</div>
                 <div class="photo-description">
                     ${obj.title}
                 </div>
-                <div class="photo-date">${obj.date}</div>
+               
             </div>
     `
     return htmlElement;
