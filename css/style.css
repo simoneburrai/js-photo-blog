@@ -63,6 +63,7 @@ main .photo-card{
     width: calc(((100% - (25px * 2)) / 3));
     flex-wrap: wrap;
     flex-shrink: 0;
+    box-shadow: 0px 5px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* PHOTO CARD PIN  */
@@ -95,6 +96,21 @@ main .photo-card{
 }
 
 
+/* Hover Options  */
+
+.photo-card:hover {
+    cursor: pointer;
+    transform: rotate(10deg);
+    z-index: 2;
+   }
+
+
+.photo-card:hover img.pin {
+    opacity: 0;
+}
+
+
+
 
 /* Responsive Media  */
  @media  screen and (max-width: 1200px) {
@@ -114,9 +130,14 @@ main .photo-card{
     main .photo-card{
         padding: 15px;
     }
+
+    .photo-card:hover {
+        cursor: pointer;
+    }
    
     .photo-card .photo-description {
         font-size: 20px;
+        text-align: left;
     }
  } 
 
@@ -125,6 +146,7 @@ main .photo-card{
     header{
         font-size: 30px;
     }
+
     main .photo-card {
         width: calc((100% - 25px) / 2 );
     }
