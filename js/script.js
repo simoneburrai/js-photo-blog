@@ -38,11 +38,7 @@ function axiosCall (apiLink){
                 containerElement.innerHTML += createHTMLElement(elements[i])
             }
 
-            // Button Overlay functions 
-
-
-            
-
+            // Button Overlay function
             function buttonFunction(){
                 const closeButtonElementResponseCheck = document.querySelector(".close-button");
                 closeButtonElementResponseCheck.addEventListener("click", function() {
@@ -60,11 +56,11 @@ function axiosCall (apiLink){
     
             for(i=0; i < photoCardAllElements.length; i++){
                 const photoCardCurrentElement = photoCardAllElements[i];
-                const currentAPIimage = elements[i];
+                const currentAPIElement = elements[i];
                 photoCardCurrentElement.addEventListener("click", function(){
                     divOverlay.innerHTML = "";
                     divOverlay.append(closeButtonElement);
-                    divOverlay.innerHTML += createImgElement(currentAPIimage);
+                    divOverlay.innerHTML += createImgElement(currentAPIElement);
                     bodyElement.classList.add("body-overflow");
                     divOverlay.classList.remove("d-none");
                     buttonFunction();
