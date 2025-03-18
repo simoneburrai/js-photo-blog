@@ -65,6 +65,7 @@ main .photo-card{
     flex-wrap: wrap;
     flex-shrink: 0;
     box-shadow: 0px 5px 2px 3px rgba(0, 0, 0, 0.4);
+    transition: all 500ms;
 }
 
 /* PHOTO CARD PIN  */
@@ -111,7 +112,6 @@ main .photo-card{
 
 .photo-card:hover {
     cursor: pointer;
-    transition-duration: 500ms;
     transform: rotate(10deg);
     z-index: 2;
     box-shadow: 0px 5px 2px 10px rgba(0, 0, 0, 0.4);
